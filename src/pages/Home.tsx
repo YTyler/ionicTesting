@@ -32,7 +32,10 @@ const Home: React.FC = () => {
             <IonAvatar>
               <img src={`https://ionicframework.com/docs/demos/api/list/avatar-${e.name.toLowerCase()}.png`} alt={e.name} />
             </IonAvatar>
-            <IonLabel>{e.desc}</IonLabel>
+            <IonLabel className="ion-padding">
+              <h2>{e.name}</h2>
+              <p>{e.desc}</p>
+            </IonLabel>
           </IonItem>
           ))}
           
