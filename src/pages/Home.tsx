@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonText, IonAvatar, IonLabel } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonItemSliding, IonAvatar, IonLabel, IonItemOptions, IonItemOption } from '@ionic/react';
 import React from 'react';
 import './Home.css';
 
@@ -13,7 +13,7 @@ const arr = [
   },
   {
     name: 'Luke',
-    desc: 'Get me out of this desert'
+    desc: 'The Last Jedi'
   }
 ]
 
@@ -28,7 +28,8 @@ const Home: React.FC = () => {
       <IonContent>
         <IonList>
           {arr.map((e) => (
-          <IonItem key={e.name}>
+          <IonItemSliding key={e.name}>
+            <IonItem>
             <IonAvatar>
               <img src={`https://ionicframework.com/docs/demos/api/list/avatar-${e.name.toLowerCase()}.png`} alt={e.name} />
             </IonAvatar>
@@ -37,6 +38,11 @@ const Home: React.FC = () => {
               <p>{e.desc}</p>
             </IonLabel>
           </IonItem>
+          <IonItemOptions side="end">
+            <IonItemOption>Hello</IonItemOption>
+            <IonItemOption>Goodbye</IonItemOption>
+          </IonItemOptions>
+          </IonItemSliding>
           ))}
           
         </IonList>
