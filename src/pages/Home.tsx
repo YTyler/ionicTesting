@@ -1,6 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonItemSliding, IonAvatar, IonLabel, IonItemOptions, IonItemOption, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonItemSliding, IonAvatar, IonLabel, IonItemOptions, IonItemOption, IonButton, IonIcon } from '@ionic/react';
 import React from 'react';
 import './Home.css';
+import { star } from 'ionicons/icons'
 
 const arr = [
   {
@@ -38,7 +39,10 @@ const Home: React.FC = () => {
               <p>{e.desc}</p>
             </IonLabel>
           </IonItem>
-          <IonButton color='primary'>Select</IonButton>
+          <IonButton expand='full' color='primary'>
+            <IonIcon slot='start' icon={star}></IonIcon>
+            Select
+          </IonButton>
           <IonItemOptions side="end">
             <IonItemOption>Hello</IonItemOption>
             <IonItemOption>Goodbye</IonItemOption>
