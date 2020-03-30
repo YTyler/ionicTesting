@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonItemSliding, IonAvatar, IonLabel, IonItemOptions, IonItemOption } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonItemSliding, IonAvatar, IonLabel, IonItemOptions, IonItemOption, IonButton } from '@ionic/react';
 import React from 'react';
 import './Home.css';
 
@@ -38,6 +38,7 @@ const Home: React.FC = () => {
               <p>{e.desc}</p>
             </IonLabel>
           </IonItem>
+          <IonButton color='primary'>Select</IonButton>
           <IonItemOptions side="end">
             <IonItemOption>Hello</IonItemOption>
             <IonItemOption>Goodbye</IonItemOption>
